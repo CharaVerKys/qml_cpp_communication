@@ -71,3 +71,5 @@ add_custom_target(generate_connections ALL
             ${CMAKE_CURRENT_SOURCE_DIR}/../backendconnectionside.hpp
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
+
+add_dependencies(generate_connections preprocessor.elf)
