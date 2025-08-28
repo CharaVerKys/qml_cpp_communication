@@ -27,8 +27,8 @@ set(RESOURCE_FILES
 )
 
 set_source_files_properties(
-    "connections/mainfiles/cvk_backendconnectionside.cpp"
-    "connections/mainfiles/cvk_frontendconnectionside.cpp"
+    "connections/mainfiles/cvk_impl_backendconnectionside.cpp"
+    "connections/mainfiles/cvk_impl_frontendconnectionside.cpp"
     PROPERTIES GENERATED TRUE
 )
 

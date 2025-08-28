@@ -1,4 +1,4 @@
-#include "frontendconnectionside.hpp"
+#include "impl_frontendconnectionside.hpp"
 
 FrontendConnectionSide::FrontendConnectionSide(BackendConnectionSide* back){
     checkThread(&mainThreadID);
