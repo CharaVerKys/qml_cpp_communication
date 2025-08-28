@@ -1,0 +1,10 @@
+// <props>
+
+// ! if i want each separate notifiable to be connected in constructor, i should reflect this class and call each function that doing that,
+// ! but i cant do it now, so creating separate file that just list all property's 'notifyBackend' to same in backend connection side
+// ? context: look at constructor of frontend con side
+
+#paste "notifiable/crashreport.hpp"
+
+
+// </props>

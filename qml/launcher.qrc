@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ApplicationWindow.qml</file>
+        <file>SingleApplicationDialog.qml</file>
+        <file>StartApplicationButton.qml</file>
+    </qresource>
+</RCC>
