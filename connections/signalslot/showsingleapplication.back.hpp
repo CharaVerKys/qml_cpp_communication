@@ -1,1 +1,1 @@
-void showSingleApplication();
+void sendShowSingleApplication();

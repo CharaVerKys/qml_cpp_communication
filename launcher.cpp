@@ -39,7 +39,7 @@ int main(int argc, char** argv){
     
     QSharedMemory memory("<uniq id memory> 24SomeQuiteRandomText23QtMem_launcher");
     if(not singleApplication(&memory)){
-        BackendConnectionSide::get()->showSingleApplication();
+        BackendConnectionSide::get()->sendShowSingleApplication();
         app.exec(); // one of ~~three~~(two) exit points, no run app backend logic if not single application
         Logger::instance()->exit();
         std::exit(EX_TEMPFAIL);
@@ -50,9 +50,9 @@ int main(int argc, char** argv){
                                         // this is only for my public lib
                                         // funny that clang complain about 0, but not about 1 value
     ApplicationControl applicationControl{*((LauncherSettings*)1)};
-    QObject::connect(BackendConnectionSide::get(),&BackendConnectionSide::restartApplicationAfterCrashChanged,
-        &applicationControl,&ApplicationControl::switchRestartingApplication);
-    QObject::connect(BackendConnectionSide::get(),&BackendConnectionSide::receivedStartApplication,
+    // QObject::connect(BackendConnectionSide::get(),&BackendConnectionSide::nosignal,
+        // &applicationControl,&ApplicationControl::switchRestartingApplication);
+    QObject::connect(BackendConnectionSide::get(),&BackendConnectionSide::receiveAppRunningStateChanged,
         &applicationControl,&ApplicationControl::startApplication);
     QObject::connect(&applicationControl,&ApplicationControl::currentlyRunningChanged,
         BackendConnectionSide::get(),&BackendConnectionSide::sendApplicationRunningChanged);

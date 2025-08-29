@@ -5,6 +5,7 @@
 // ? context: look at constructor of frontend con side
 
 #paste "notifiable/crashreport.hpp"
+#paste "notifiable/runningstate.hpp"
 
 
 // </props>

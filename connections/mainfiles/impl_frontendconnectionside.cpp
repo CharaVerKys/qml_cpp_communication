@@ -6,10 +6,7 @@ FrontendConnectionSide::FrontendConnectionSide(BackendConnectionSide* back){
     back_con = back;
 // bound qthread of backend may be different, but if use non direct for backendCon <-> backendModules it is negligible
 
-// connect notify to backend with queued con, without magic
-// connect(this,&notifyBackend,backend,&receiveFunc,Qt::queued...)
-#paste "../notifiable/_connections.hpp"
+    #insert notify connections
 
-#paste "../signalslot/_connections.hpp"
-
+    #insert frontend connections
 }
