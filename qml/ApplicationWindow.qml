@@ -10,11 +10,16 @@ import QtQuick.Layouts
 
 ApplicationWindow
 {
-    Material.theme: Material.Dark
+
+
     visible: true
+
     // our device window is 1024, 768
+    //
     width: 780
+
     height: 520
+
     title: qsTr("*your*Launcher")
 
     SingleApplicationDialog{
@@ -25,6 +30,6 @@ ApplicationWindow
 
     Connections {
         target: frontendConnectionSide
-        function onShowSingleApplicationDialog(){ singleApplication_dialog.open()}
+        function onReceiveShowSingleApplicationDialog(){ singleApplication_dialog.open()}
     }
 }

@@ -7,5 +7,5 @@ Button{
     x: 200
     y: 50
     text: "Start Application"
-    onClicked: frontendConnectionSide.sendStartApplication()
+    onClicked: frontendConnectionSide.notifiable_appRunningState = true
 }
